@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar2.vue";
+import Navbar from "./components/Navbar.vue";
 import PiePag from "./components/PiePag.vue";
 import Transicion from './components/Transicion.vue';
 import Footer from './components/Footer.vue';

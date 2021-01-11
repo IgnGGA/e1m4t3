@@ -4,7 +4,7 @@ import Cover from '../views/Cover.vue'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Contact from '../views/Contact.vue'
-import Info from '../views/Info2.vue'
+import Info from '../views/Info.vue'
 import Registration from '../views/Registration.vue'
 import Rules from '../views/Rules.vue'
 
