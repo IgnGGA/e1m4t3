@@ -8,18 +8,7 @@
           <b-button @click="showS = !showS" class="mb-2" variant="success">September</b-button>
           <b-button @click="showO = !showO" class="mb-2" variant="info">October</b-button>
           </div>
-         
-          <div>
-            <h3>Our teams</h3>
-            <b-list-group>
-              <b-list-group-item><img src="../assets/icon/G1.png" alt="icono" class="avat">The pelicans</b-list-group-item>
-              <b-list-group-item><img src="../assets/icon/G2.png" alt="icono" class="avat">The rattlesnakes</b-list-group-item>
-              <b-list-group-item><img src="../assets/icon/G3.png" alt="icono" class="avat">The squirreles</b-list-group-item>
-              <b-list-group-item><img src="../assets/icon/G4.png" alt="icono" class="avat">The reindeer</b-list-group-item>
-              <b-list-group-item><img src="../assets/icon/G5.png" alt="icono" class="avat">The dinos</b-list-group-item>
-              <b-list-group-item><img src="../assets/icon/G6.png" alt="icono" class="avat">The unicorns</b-list-group-item>
-            </b-list-group>
-          </div>
+          <Teams></Teams>
       </div>
 
     </b-col>
@@ -76,6 +65,7 @@
 <script>
 import TablaSep from '../components/TablaSep.vue';
 import TablaOct from '../components/TablaOct.vue';
+import Teams from '../components/Teams.vue'
 
 export default {
   data () {
@@ -95,6 +85,7 @@ export default {
   components:{
     TablaSep,
     TablaOct,
+    Teams,
   }
 }
 </script>
