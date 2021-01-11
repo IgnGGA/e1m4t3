@@ -11,70 +11,10 @@
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <!-- Text slides with image -->
-      <!-- <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-lg.jpg"
-      ></b-carousel-slide>
-
-       Slides with custom text -->
-      <!-- <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide> -->
-
-      <!-- Slides with image only -->
-      <!-- <b-carousel-slide img-src="https://static.guiainfantil.com/media/793/c/el-futbol-para-los-ninos-lg.jpg"></b-carousel-slide> -->
+      @sliding-end="onSlideEnd">
       <b-carousel-slide img-src="https://static.guiainfantil.com/uploads/salud/nino-juega-futbol-pelota-brazo-p.jpg"></b-carousel-slide>
       <b-carousel-slide img-src="https://www.acadef.es/wp-content/uploads/2019/12/como-ser-un-buen-entrenador-infantil.jpg"></b-carousel-slide>
       <b-carousel-slide img-src="https://media.istockphoto.com/photos/soccer-field-picture-id1022594986?k=6&m=1022594986&s=612x612&w=0&h=dEvbqACPFWMmMKlMJrnHeSUeJx0QZOL2i8bBybVHp3c="></b-carousel-slide>
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <!-- <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template> -->
-      <!-- </b-carousel-slide> -->
-
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <!-- <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide> -->
     </b-carousel>
-
-    <!-- <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p> -->
   </div>
 </template>
-
-// <script>
-//   export default {
-//     data() {
-//       return {
-//         slide: 0,
-//         sliding: null
-//       }
-//     },
-//     methods: {
-//       onSlideStart(slide) {
-//         this.sliding = true
-//       },
-//       onSlideEnd(slide) {
-//         this.sliding = false
-//       }
-//     }
-//   }
-// </script>
