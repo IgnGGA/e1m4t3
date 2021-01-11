@@ -1,6 +1,6 @@
 <template>
 <div>
-  <b-navbar toggleable="sm" type="light" variant="success">
+  <b-navbar toggleable="sm" type="dark" variant="success">
 
     <b-navbar-brand to="/">NYSL</b-navbar-brand>
   <b-navbar-toggle target="navbar-toggle-collapse">
