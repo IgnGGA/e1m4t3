@@ -1,5 +1,5 @@
 <template>
-  <div id="PiePag">
+  <div id="Moments">
     <b-button v-b-toggle.sidebar-footer variant="success"><b-icon icon="camera" rotate="45"></b-icon> Momentos</b-button>
     <b-sidebar id="sidebar-footer" aria-label="Sidebar with custom footer" no-header shadow>
       <template #footer="{ hide }">
@@ -27,7 +27,7 @@
 import Carrusel from './Carrusel.vue'
 
 export default {
-  name:'PiePag',
+  name:'Moments',
   components:{
     Carrusel,
   }

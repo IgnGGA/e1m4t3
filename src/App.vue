@@ -7,7 +7,7 @@
       <Transicion></Transicion>
     </div>
     <footer>
-      <PiePag></PiePag>
+      <Moments></Moments>
       <Footer></Footer>
     </footer>
   </div>
@@ -15,7 +15,7 @@
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import PiePag from "./components/PiePag.vue";
+import Moments from "./components/Moments.vue";
 import Transicion from './components/Transicion.vue';
 import Footer from './components/Footer.vue';
 
@@ -24,7 +24,7 @@ export default {
   name: "App",
   components: {
     Navbar,
-    PiePag,
+    Moments,
     Transicion,
     Footer,
    
