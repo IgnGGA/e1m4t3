@@ -7,6 +7,7 @@ import Contact from '../views/Contact.vue'
 import Info from '../views/Info.vue'
 import Registration from '../views/Registration.vue'
 import Rules from '../views/Rules.vue'
+import PageTestView from '../views/PageTestView.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ const routes = [
     path:'/rules',
     name:'Rules',
     component:Rules
+  },
+  {
+    path:'/PageTestView',
+    name:'PageTestView',
+    component:PageTestView
   }
 ]
 
