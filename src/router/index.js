@@ -8,6 +8,7 @@ import Info from '../views/Info.vue'
 import Registration from '../views/Registration.vue'
 import Rules from '../views/Rules.vue'
 import NewLogin from '../components/NewLogin.vue'
+import NewRegistro from '../components/NewRegistro.vue'
 import Dashboard from '../components/Dashboard'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: NewLogin
+  },
+  {
+    path: '/registro',
+    name: 'registro',
+    component: NewRegistro
   },
   {
     path: '/home',

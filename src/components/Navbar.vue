@@ -17,7 +17,8 @@
         <b-nav-item to="/info"><b-icon icon="exclamation-circle-fill"></b-icon> Info</b-nav-item>
         <b-nav-item to="/registration"><b-icon icon="input-cursor-text"></b-icon> Registration</b-nav-item>
         <b-nav-item to="/rules"><b-icon icon="layout-text-sidebar-reverse"></b-icon> Rules</b-nav-item>
-        <b-nav-item to="/login"><b-icon icon="door-open"></b-icon> Login</b-nav-item>
+        <b-nav-item to="/login"><b-icon icon="door-open"></b-icon> Log in</b-nav-item>
+        <b-nav-item to="/login"><b-icon icon="door-open"></b-icon><a class="nav-link" @click.prevent="signOut">Log out</a></b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -25,3 +26,31 @@
 
 </template>
 
+<script>
+import { mapGetters } from "vuex";
+import firebase from "firebase";
+export default {
+  computed: {
+    ...mapGetters({
+// map `this.user` to `this.$store.getters.user`
+      user: "user"
+    })
+  },
+  methods: {
+    signOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+                this.$swal({  
+                type: 'info',  
+                title: 'Log out',  
+                text: 'Come back soon!'  
+            }); 
+          this.$router.push('Home') 
+
+        });
+    }
+  }
+};
+</script>
