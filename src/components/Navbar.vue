@@ -17,6 +17,7 @@
         <b-nav-item to="/info"><b-icon icon="exclamation-circle-fill"></b-icon> Info</b-nav-item>
         <b-nav-item to="/registration"><b-icon icon="input-cursor-text"></b-icon> Registration</b-nav-item>
         <b-nav-item to="/rules"><b-icon icon="layout-text-sidebar-reverse"></b-icon> Rules</b-nav-item>
+        <b-nav-item to="/login"><b-icon icon="door-open"></b-icon> Login</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
