@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import firebase from 'firebase'
 import VueRouter from 'vue-router'
 import Cover from '../views/Cover.vue'
 import Home from '../views/Home.vue'
@@ -8,49 +9,62 @@ import Info from '../views/Info.vue'
 import Registration from '../views/Registration.vue'
 import Rules from '../views/Rules.vue'
 import PageTestView from '../views/PageTestView.vue'
+import Login from '../components/Login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path:'*',
+    redirect:'/',
+  },
+  {
     path :"/",
-    name:Cover,
-    component:Cover
+    name: 'Cover',
+    component:Cover,
   },
   {
     path: '/home',
     name: 'Home',
-    component: Home
+    component: Home,
   },
   {
     path: '/about',
     name: 'About',
-    component: About
+    component: About,
   },
   {
     path:'/contact',
     name:'Contact',
-    component:Contact
+    component: Contact,
   },
   {
     path:'/info',
     name:'Info',
-    component:Info
+    component: Info,
   },
   {
     path:'/registration',
     name:'Registration',
-    component:Registration
+    component: Registration,
   },
   {
     path:'/rules',
     name:'Rules',
-    component:Rules
+    component: Rules,
   },
   {
     path:'/PageTestView',
     name:'PageTestView',
-    component:PageTestView
+    component: PageTestView,
+    meta:{
+      authenticador:true
+    }
+  },
+  {
+    path:'Login',
+    name:'Login',
+    component:Login,
   }
 ]
 
@@ -61,3 +75,14 @@ const router = new VueRouter({
 })
 
 export default router
+
+router.beforeEach((to, from, next)=>{
+  const authenticador=to.matched.some(verificador=>verificador.meta.authenticador);
+
+  if(authenticador){
+    firebase.auth().onAuthStateChanged((user)=>{
+      if (!user) next('/')
+      else next();
+    })
+  } else next()
+})
