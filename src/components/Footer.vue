@@ -1,7 +1,7 @@
 <template>
     <div class="card text-center">
   <div class="card-header">
-    NorthSide Youth Soccer League
+    {{$store.getters.titFooter}}
   </div>
   <div class="card-body" >
     <h5 class="card-title">Let's play!</h5>

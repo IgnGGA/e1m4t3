@@ -2,7 +2,7 @@
 <div>
   <b-navbar toggleable="sm" type="dark" variant="success">
 
-    <b-navbar-brand to="/">NYSL</b-navbar-brand>
+    <b-navbar-brand to="/">{{$store.getters.titNavbar}}</b-navbar-brand>
   <b-navbar-toggle target="navbar-toggle-collapse">
       <template #default="{ expanded }">
         <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
