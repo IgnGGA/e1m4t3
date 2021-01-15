@@ -1,7 +1,7 @@
 <template>
   <div id="social">
     <p class="card-text">Find us on our social networks.</p>
-    <a href="https://web.facebook.com/NorthSideYouthSoccerLeague/?_rdc=1&_rdr"
+    <a v-bind:href='$store.getters.facebook'
       ><b-icon
         class="rrss"
         icon="facebook"
@@ -9,7 +9,7 @@
         style="color: #3b5998"
       ></b-icon></a
     >&nbsp;
-    <a href="https://www.instagram.com/northsidesoccerindy/"
+    <a v-bind:href='$store.getters.instagram'
       ><b-icon
         class="rrss"
         icon="instagram"
@@ -18,7 +18,7 @@
       ></b-icon></a
     >&nbsp;
     <a
-      href="https://www.youtube.com/watch?app=desktop&v=dQw4w9WgXcQ&list=PLJmvyRGClNKiEWKe-lJdfNxImgefHCfQJ&index=2"
+      v-bind:href='$store.getters.youtube'
       ><b-icon
         class="rrss"
         icon="youtube"
@@ -26,7 +26,7 @@
         style="color: red"
       ></b-icon></a
     >&nbsp;
-    <a href="https://twitter.com/northside_fc"
+    <a v-bind:href='$store.getters.twitter'
       ><b-icon class="rrss" icon="twitter" font-scale="2"></b-icon></a
     >&nbsp;
   </div>

@@ -7,7 +7,13 @@ import Contact from '../views/Contact.vue'
 import Info from '../views/Info.vue'
 import Registration from '../views/Registration.vue'
 import Rules from '../views/Rules.vue'
+<<<<<<< HEAD
 import PageTestView from '../views/PageTestView.vue'
+=======
+import NewLogin from '../components/NewLogin.vue'
+import NewRegistro from '../components/NewRegistro.vue'
+import Dashboard from '../components/Dashboard'
+>>>>>>> con-login
 
 Vue.use(VueRouter)
 
@@ -18,6 +24,19 @@ const routes = [
     component:Cover
   },
   {
+<<<<<<< HEAD
+=======
+    path: '/login',
+    name: 'login',
+    component: NewLogin
+  },
+  {
+    path: '/registro',
+    name: 'registro',
+    component: NewRegistro
+  },
+  {
+>>>>>>> con-login
     path: '/home',
     name: 'Home',
     component: Home
