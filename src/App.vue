@@ -8,6 +8,7 @@
     </div>
     <footer>
       <Moments></Moments>
+      <Chat></Chat>
       <Footer></Footer>
     </footer>
   </div>
@@ -18,6 +19,7 @@ import Navbar from "./components/Navbar.vue";
 import Moments from "./components/Moments.vue";
 import Transicion from './components/Transicion.vue';
 import Footer from './components/Footer.vue';
+import Chat from './components/Chat';
 
 
 export default {
@@ -27,7 +29,8 @@ export default {
     Moments,
     Transicion,
     Footer,
-   
+   Chat
+
   },
 };
 </script>

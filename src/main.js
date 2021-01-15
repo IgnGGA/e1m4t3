@@ -8,11 +8,13 @@ import router from './router'
 import store from "./store";
 import VueSweetalert2 from 'vue-sweetalert2';
 
+
 Vue.config.productionTip = false
 
 const configOptions = {
   apiKey: "AIzaSyBOsC1nRpneZ9Zmo_RbNEZaAwu4C2D1POo",
   authDomain: "liga-login.firebaseapp.com",
+  databaseURL: "https://liga-login-default-rtdb.firebaseio.com",
   projectId: "liga-login",
   storageBucket: "liga-login.appspot.com",
   messagingSenderId: "8566205321",

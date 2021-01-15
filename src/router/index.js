@@ -10,6 +10,7 @@ import Rules from '../views/Rules.vue'
 import NewLogin from '../components/NewLogin.vue'
 import NewRegistro from '../components/NewRegistro.vue'
 import Dashboard from '../components/Dashboard'
+import ChatRoom from '../views/ChatRoom.vue'
 
 Vue.use(VueRouter)
 
@@ -63,6 +64,11 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard
+  },
+  {
+    path:'/chat',
+    name:'Chat',
+    component:ChatRoom
   },
 
 ]
