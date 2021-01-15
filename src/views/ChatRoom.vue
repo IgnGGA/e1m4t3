@@ -15,3 +15,52 @@
         <button class='btn btn-success' @click='sendMessage'>Send</button>
     </div>
 </template>
+
+<script>
+import firebase from 'firebase';
+
+export default {
+    name:'Chat',
+    data(){
+        return{
+            name:'',
+            showMessage:'',
+            messages:[],
+            datatime:null
+        };
+    },
+    methods:{
+        sendMessage(){
+            const today=new Date();
+            const date=today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+            const time=today.getHours()+':'+today.getMinutes()+':'+today.getSeconds();
+            const dataTime=date+''+time;
+            this.datatime=dataTime;
+            const message={
+                text:this.showMessage,
+                usermane:this.name,
+                datatime:this.datatime,
+            };
+            firebase.database().ref('messages').push(message);
+            this.showMessage='';
+        }
+    },
+    mounted(){
+        this.name=firebase.auth().currentUser.email;
+        const query=firebase.database().ref('messages');
+        query.on('value', snapshot=>{
+            let data=snapshot.val();
+            let messages=[];
+            Object.keys(data).forEach(key=>{
+                messages.push({
+                    id:key,
+                    username:data[key].username,
+                    text:data[key].text,
+                    datatime:data[key].datatime,
+                });
+            });
+            this.messages=messages;
+        });
+    }
+};
+</script>
