@@ -60,10 +60,11 @@ const routes = [
     component:Rules
   },
   {
-    path:'/PageTestView',
-    name:'PageTestView',
-    component:PageTestView
-  }
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard
+  },
+
 ]
 
 const router = new VueRouter({
