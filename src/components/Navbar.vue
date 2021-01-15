@@ -17,11 +17,8 @@
         <b-nav-item to="/info"><b-icon icon="exclamation-circle-fill"></b-icon> Info</b-nav-item>
         <b-nav-item to="/registration"><b-icon icon="input-cursor-text"></b-icon> Registration</b-nav-item>
         <b-nav-item to="/rules"><b-icon icon="layout-text-sidebar-reverse"></b-icon> Rules</b-nav-item>
-<<<<<<< HEAD
-=======
         <b-nav-item to="/login"><b-icon icon="door-open"></b-icon> Log in</b-nav-item>
         <b-nav-item to="/login"><b-icon icon="door-open"></b-icon><a class="nav-link" @click.prevent="signOut">Log out</a></b-nav-item>
->>>>>>> con-login
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>

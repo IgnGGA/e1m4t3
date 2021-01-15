@@ -4,10 +4,6 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from './router'
-<<<<<<< HEAD
-
-Vue.config.productionTip = false
-=======
 import store from "./store";
 import VueSweetalert2 from 'vue-sweetalert2';
 
@@ -30,7 +26,6 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 Vue.use(VueSweetalert2);
 
->>>>>>> con-login
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
