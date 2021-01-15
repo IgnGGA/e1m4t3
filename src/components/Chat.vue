@@ -19,7 +19,7 @@
 import ChatRoom from '../views/ChatRoom'
 
 export default {
-  name:'Moments',
+  name:'Chat',
   components:{
     ChatRoom,
   }

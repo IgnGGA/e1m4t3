@@ -42,7 +42,7 @@ export default {
       const time = today.getHours()+ ':' +(today.getMinutes() + 1)+ ':' +today.getSeconds();
       const dateTime = date + '' + time
       
-      this.dateTime = dateTime;
+      this.datetime = dateTime;
 
       const message = {
         text: this.showMessage,
