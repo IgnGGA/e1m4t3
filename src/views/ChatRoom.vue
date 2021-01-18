@@ -32,8 +32,7 @@ export default {
   },
   methods: {
     sendMessage() {
-      this.name = firebase.auth().currentUser.email;
-
+       this.name = firebase.auth().currentUser.email;
       const today = new Date();
       const date = today.getFullYear()+ '-' +(today.getMonth() + 1)+ '-' +today.getDate();
       const time = today.getHours()+ ':' +(today.getMinutes() + 1)+ ':' +today.getSeconds();
@@ -44,14 +43,17 @@ export default {
         username: this.name,
         datetime: this.datetime
       };
+      console.log(message);
       firebase.database().ref("messages").push(message);
       this.showMessage = "";
     }
   },
   mounted() {
     this.name = firebase.auth().currentUser.email;
-    const query = firebase.database().ref("mensages");
-      query.on("value", snapshot => {
+    firebase
+      .database()
+      .ref("mensages")
+      .on("value", (snapshot) => {
         let data = snapshot.val();
         let messages = [];
         Object.keys(data).forEach(key => {
@@ -64,6 +66,6 @@ export default {
         });
         this.messages = messages;
       });
-  }
+  },
 };
 </script>
