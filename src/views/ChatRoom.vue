@@ -5,10 +5,7 @@
       <div class="card">
         <div class="card-body">
           <div
-            class="border pl-2 pt-1 ml-2 message-text mb-2"
-            v-for="(message, index) in messages"
-            :key="index" >
-            
+            class="border pl-2 pt-1 ml-2 message-text mb-2" v-for="(message, index) in messages" :key="index" >
             <span class="mg-text" {{message.username}}></span>
             <span class="message" {{message.datetime}}></span>
             <p class="message pt-1" {{message.text}}></p>
@@ -40,10 +37,8 @@ export default {
       const today = new Date();
       const date = today.getFullYear()+ '-' +(today.getMonth() + 1)+ '-' +today.getDate();
       const time = today.getHours()+ ':' +(today.getMinutes() + 1)+ ':' +today.getSeconds();
-      const dateTime = date + '' + time
-      
+      const dateTime = date + ' - ' + time
       this.datetime = dateTime;
-
       const message = {
         text: this.showMessage,
         username: this.name,
@@ -57,17 +52,15 @@ export default {
     this.name = firebase.auth().currentUser.email;
     const query = firebase.database().ref("mensages");
       query.on("value", snapshot => {
-
         let data = snapshot.val();
         let messages = [];
-
         Object.keys(data).forEach(key => {
           messages.push({
             id: key,
             username: data[key].username,
             text: data[key].text,
-            datetime: data[key].datetime
-          })
+            datetime: data[key].datetime,
+          });
         });
         this.messages = messages;
       });
